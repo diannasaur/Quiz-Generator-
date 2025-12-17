@@ -1,0 +1,38 @@
+<!--
+this file initalizes the avalonia gui components
+it includes three text blocks, 4 radio buttons and a button
+-->
+
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="600" d:DesignHeight="400"
+        x:Class="AvaloniaGUI_Quiz.MainWindow"
+        Title="MCQ App">
+
+        <StackPanel Margin="20" Spacing="10">
+
+            <!--displays score-->
+            <TextBlock x:Name="DisplayScore" Text="Score will appear here." FontSize="16" Foreground="Blue" HorizontalAlignment="Center"/>
+
+            <!--displays currrent question and when quiz is completed-->
+            <TextBlock x:Name="QuestionText" Text="Question will appear here" TextWrapping="Wrap" FontSize="18"/>
+
+            <!--RadioButtons that display the choices-->
+            <StackPanel>
+                <RadioButton x:Name="OptionA" Content="Option A" />
+                <RadioButton x:Name="OptionB" Content="Option B" />
+                <RadioButton x:Name="OptionC" Content="Option C" />
+                <RadioButton x:Name="OptionD" Content="Option D" />
+            </StackPanel>
+
+            <!--next button (also the restart button)-->
+            <Button x:Name="NextButton" Content="Next" Width="120" HorizontalAlignment="Center" Click="NextButtonClick" />
+
+            <!--displays the number of the question being answered and the total score at the end-->
+            <TextBlock x:Name="FooterText" Text="Footer messages will appear here." FontSize="16" Foreground="Red" HorizontalAlignment="Center"/>
+
+        </StackPanel>
+
+</Window>
